@@ -245,14 +245,125 @@ body {
     display: block;
 }
 
-/* ================= FOOTER ================= */
-.footer {
-    background-color: var(--text-color);
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
+/* ================= FOOTER MODERNO Y ELEGANTE ================= */
+.footer-moderno {
+    background-color: var(--bg-color); /* Crema suave */
+    border-top: 1px solid #EAEAEA;
+    padding: 60px 8% 25px; /* Espaciado amplio estilo galería */
+    color: var(--text-color);
+    font-family: var(--font-textos);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+/* Marca y descripción izquierda */
+.footer-brand {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.02);
+}
+
+.footer-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Distribución de las listas derechas */
+.footer-links-grid {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 100px; /* Separación amplia entre columnas, como en la referencia */
+    flex-wrap: wrap;
+}
+
+.footer-columna h4 {
+    font-family: var(--font-titulos);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-columna ul li {
+    margin-bottom: 15px;
     font-size: 0.9rem;
-    font-weight: 300;
+    color: #666; /* Gris para lectura suave */
+}
+
+.footer-columna ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-columna ul li a:hover {
+    color: var(--accent-color); /* Verde oliva al pasar el ratón */
+    font-weight: 500;
+}
+
+.link-whatsapp {
+    gap: 8px; /* Espaciado para el ícono */
+}
+
+/* Parte inferior del footer (Copyright) */
+.footer-bottom {
+    border-top: 1px solid #EAEAEA;
+    padding-top: 25px;
+    text-align: center; /* Cambiado para centrar el texto */
+    display: flex;
+    justify-content: center; /* Cambiado para centrar el contenido horizontalmente */
+    align-items: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* ================= DISEÑO RESPONSIVE (MÓVILES) ================= */
+@media (max-width: 768px) {
+    .footer-contenido {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-links-grid {
+        justify-content: flex-start; /* Alinea a la izquierda en celular */
+        gap: 40px;
+    }
+
+    .footer-columna {
+        min-width: 140px; /* Asegura que no se junten demasiado */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding-bottom: 20px; /* Espacio extra considerando tu menú móvil pegado abajo */
+    }
 }
 
 /* ================= SECCIÓN DECÁLOGO ================= */
